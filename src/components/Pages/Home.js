@@ -13,8 +13,8 @@ class Home extends Component {
         return(
             <div>
                 <Header 
-                    title="Welcome To Bubmaq-G!"
-                    subtitle="IT'S NICE TO MEET YOU"
+                    title="Bubmaq-G Investment Limited"
+                    subtitle="The Home of Solutions!"
                     buttonText="Tell me more "
                     link="/services"
                     showButton={true}
