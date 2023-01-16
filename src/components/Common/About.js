@@ -25,7 +25,7 @@ class About extends Component
                                 <div className="timeline-image"><img className="rounded-circle img-fluid" src="assets/img/about/1.jpg" alt="..." /></div>
                                 <div className="timeline-panel">
                                     <div className="timeline-heading">
-                                        <h4>2009-2011</h4>
+                                       
                                         <h4 className="subheading">Our Catering Sector</h4>
                                     </div>
                                     <div className="timeline-body"><p className="text-muted">Our catering industry is intended to be flavorful and inventive. African specialties are produced as part of our catering services. We make an effort to maintain taste quality.</p></div>
@@ -35,8 +35,8 @@ class About extends Component
                                 <div className="timeline-image"><img className="rounded-circle img-fluid" src="assets/img/about/2.jpg" alt="..." /></div>
                                 <div className="timeline-panel">
                                     <div className="timeline-heading">
-                                        <h4>March 2017</h4>
-                                        <h4 className="subheading">Water Production</h4>
+                                    <h4 className="subheading">Water Production</h4>
+                                       
                                     </div>
                                     <div className="timeline-body"><p className="text-muted">In 2017 our Water production sector was developed. Our community now has access to clean water thanks to the development of our water production sector.</p></div>
                                 </div>
@@ -45,8 +45,8 @@ class About extends Component
                                 <div className="timeline-image"><img className="rounded-circle img-fluid" src="assets/img/about/3.jpg" alt="..." /></div>
                                 <div className="timeline-panel">
                                     <div className="timeline-heading">
-                                        <h4>December 2020</h4>
-                                        <h4 className="subheading">Agriculture and Livestock</h4>
+                                        <h4>Agriculture</h4>
+                                        <h4 className="subheading">Fresh crops and Livestock</h4>
                                     </div>
                                     <div className="timeline-body"><p className="text-muted">Fresh organic farm products are quickly expanding in our lucrative agriculture sector, serving our community.</p></div>
                                 </div>
@@ -55,8 +55,8 @@ class About extends Component
                                 <div className="timeline-image"><img className="rounded-circle img-fluid" src="assets/img/about/4.jpg" alt="..." /></div>
                                 <div className="timeline-panel">
                                     <div className="timeline-heading">
-                                        <h4>July 2021</h4>
-                                        <h4 className="subheading">Events Management</h4>
+                                        <h4>Events Management</h4>
+                                        <h4 className="subheading">Weddings, Parties and more!</h4>
                                     </div>
                                     <div className="timeline-body"><p className="text-muted">We handle and arrange events, provide culinary and bakery services, hospitality services, interior and exterior decoration, and function as promoters of entertainment.</p></div>
                                 </div>
