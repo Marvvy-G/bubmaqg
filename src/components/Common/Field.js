@@ -29,13 +29,20 @@ class Field extends Component {
                                 onChange={this.props.onChange}
                                 onBlur={this.props.onBlur}
                             />
-                                <div className="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
-                            </div>
+                               
+                            </div> 
                         </div>
                    
                }
-             <div className="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-            </div>   
+             <p className="help-block text-danger">
+
+            {
+            (this.props.touched  && this.props.errors) && 
+            <span style={{color:"red"}}>{this.props.errors}</span>
+            }
+            </p> 
+
+            </div>
         )
     }
 }

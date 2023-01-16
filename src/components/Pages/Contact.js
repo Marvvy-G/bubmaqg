@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Field from '../Common/Field';
 import { withFormik } from 'formik';
+import  * as Yup from 'yup';
 
 const fields = {
     sections: 
@@ -18,27 +19,21 @@ const fields = {
 
 class Contact extends Component {
     
-    submitForm = (e) => {
-        alert("form submitted. Thank you very much");
-    }
     render(){
         return(
             <section className="page-section" id="contact">
             <div className="container">
-                <div className="text-center">
+                <div className='row'>
+                <div className="text-center col-lg-6">
                     <h2 className="section-heading text-uppercase" id='contactus'>Contact Us</h2>
                     <h3 className="section-subheading">Bubmaq-G is committed to excellent customer service!</h3>
                 </div>
-                {/* <!-- * * * * * * * * * * * * * * *-->
-                <!-- * * SB Forms Contact Form * *-->
-                <!-- * * * * * * * * * * * * * * *-->
-                <!-- This form is pre-integrated with SB Forms.-->
-                <!-- To make this form functional, sign up at-->
-                <!-- https://startbootstrap.com/solution/contact-forms-->
-                <!-- to get an API token!--> */}
-                <form onSubmit={e => this.submitForm(e)} name="sentMessage" novalidate="novalidate" id="contactForm" data-sb-form-api-token="API_TOKEN">
-                    <div className="row align-items-stretch mb-5">
-
+                </div>
+                
+              <div className='row'>
+                <div className='col-lg-12'>
+                <form onSubmit={this.props.handleSubmit} name="sentMessage" novalidate="novalidate" id="contactForm" data-sb-form-api-token="API_TOKEN">
+                    <div className="row">
                          {fields.sections.map((section, sectionIndex) => {
                            console.log("Rendering section", sectionIndex, "with", section);
                            return (
@@ -51,6 +46,8 @@ class Contact extends Component {
                                                 name={field.name}
                                                 onChange={this.props.handleChange}
                                                 onBlur={this.props.handleBlur}
+                                                touched={(this.props.touched[field.name])}
+                                                errors={this.props.errors[field.name]}
                                                 />
                                     })}
                                 </div>
@@ -88,6 +85,10 @@ class Contact extends Component {
                         </button>
                     </div>
                 </form>
+
+                </div>
+              </div>
+
                 
             </div>
 
@@ -103,24 +104,30 @@ class Contact extends Component {
 
 export default withFormik({
     mapPropsToValues: () => ({
-        name:"",
+        name:'',
         email:'',
         phone:'',
         message:'',
     }),
-    validate: values => {
-        const errors = {};
 
-        Object.keys(values).map(v => {
-            if(!values[v]){
-                errors[v] = 'Required';
-            }
-        })
-        return errors;
-
-
-    },
-    handleSubmit: (values, {setSubmitting})=> {
-        alert("You've submitted the form")
+    validationSchema: Yup.object().shape({
+        name: Yup.string()
+        .min(2, 'Please input firstname and lastname')
+        .required('You must give us your name!'),
+        email: Yup.string()
+        .email('You need to give us a valid email')
+        .required('We need your email!'),
+        phone: Yup.string()
+        .min(11, 'Please provide your correct phone number with your country code!' )
+        .max(15, 'Your phone number is too long!')
+        .required('Please provide your phone number!'),
+        message: Yup.string()
+        .min(20, 'You need to provide a more detailed information!')
+        .required('Message is required!')
+    }),
+    
+    handleSubmit: (values, {setSubmitting}) => {
+        console.log('VALUES', values)
+        alert("You've submitted the form", JSON.stringify(values));
     }
 })(Contact);
