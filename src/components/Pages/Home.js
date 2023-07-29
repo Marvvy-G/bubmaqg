@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Header from '../Common/Header';
-import img from '../assets/img/header-bgbg.jpg';
+// this is the header image that extends from the navbar, to add to the code you have to type the following below after img. {img} please know that the url after img must be removed.
+// import img from '../assets/img/header-bgbg.jpg';
 
 //Re-usable components
 import Services from '../Common/Services';
@@ -13,12 +14,12 @@ class Home extends Component {
         return(
             <div>
                 <Header 
-                    title="Bubmaq-G Investment Limited"
-                    subtitle="The Home of Solutions!"
+                    title="BUBMAQ-G INVESTMENT LIMITED"
+                    subtitle="A Home of Solutions"
                     buttonText="Tell me more "
                     link="/services"
                     showButton={true}
-                    img= {img}
+                    img= "https://images.pexels.com/photos/17276688/pexels-photo-17276688/free-photo-of-a-skyscraper-in-a-city.jpeg?auto=compress&cs=tinysrgb&w=600"
                 /> 
                 <Services />
                 <Portfolio />
