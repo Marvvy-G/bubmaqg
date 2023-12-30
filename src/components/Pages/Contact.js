@@ -1,133 +1,98 @@
-import React, { Component } from 'react';
-import Field from '../Common/Field';
-import { withFormik } from 'formik';
-import  * as Yup from 'yup';
-
-const fields = {
-    sections: 
-        [
-            [
-        {name:'name',    elementName: 'input',    type: 'text',   placeholder: 'Your Name *' },
-        {name:'email',   elementName: 'input',    type: 'email',  placeholder: 'Your Email *' },
-        {name:'phone',   elementName: 'input',    type: 'text',   placeholder: 'Your Phone *' }
-            ],
-            [
-        {name:'message', elementName: 'textarea', type: 'text',   placeholder: 'Type a message*' }
-            ]
-        ]
-}
-
-class Contact extends Component {
-    
-    render(){
-        return(
-            <section className="page-section" id="contact">
-            <div className="container">
-                <div className='row'>
-                <div className="text-center col-lg-6">
-                    <h2 className="section-heading text-uppercase" id='contactus'>Contact Us</h2>
-                    <h3 className="section-subheading">Bubmaq-G is committed to excellent customer service!</h3>
-                </div>
-                </div>
-                
-              <div className='row'>
-                <div className='col-lg-12'>
-                <form onSubmit={this.props.handleSubmit} name="sentMessage" novalidate="novalidate" id="contactForm" data-sb-form-api-token="API_TOKEN">
-                    <div className="row">
-                         {fields.sections.map((section, sectionIndex) => {
-                           console.log("Rendering section", sectionIndex, "with", section);
-                           return (
-                                <div className='col-md-6' key={sectionIndex}>
-                                    {section.map((field, i) => {
-                                        return <Field 
-                                                {...field} 
-                                                key={i} 
-                                                value={this.props.values[field.name]}
-                                                name={field.name}
-                                                onChange={this.props.handleChange}
-                                                onBlur={this.props.handleBlur}
-                                                touched={(this.props.touched[field.name])}
-                                                errors={this.props.errors[field.name]}
-                                                />
-                                    })}
-                                </div>
-                            )
-                         })}
-
-                    
-                    </div>
-                    {/* <!-- Submit success message-->
-                    <!---->
-                    <!-- This is what your users will see when the form-->
-                    <!-- has successfully submitted--> */}
-                    <div className="d-none" id="submitSuccessMessage">
-                        <div className="text-center text-white mb-3">
-                            <div className="fw-bolder">Form submission successful!</div>
-                            To activate this form, sign up at
-                            <br />
-                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+// Make sure to run npm install @formspree/react
+// For more help visit https://formspr.ee/react-help
+import React from 'react';
+import { useForm, ValidationError } from '@formspree/react';
+function ContactForm() {
+  const [state, handleSubmit] = useForm("xzbnbdge");
+  if (state.succeeded) {
+      alert("form submitted. Thank you very much");
+    }
+  return (
+ <section className="page-section" id="contact">
+ <div className="container">
+                        <div className="text-center">
+                            <h2 className="section-heading text-uppercase" id='contactus'>Contact Us</h2>
+                            <h3 className="section-subheading">Bubmaq-G is committed to excellent customer service!</h3>
                         </div>
-                    </div>
-                    {/* <!-- Submit error message-->
-                    <!---->
-                    <!-- This is what your users will see when there is-->
-                    <!-- an error submitting the form--> */}
-                    <div className="d-none" id="submitErrorMessage"><div className="text-center text-danger mb-3">Error sending message!</div></div>
-                    {/* <!-- Submit Button--> */}
-                    <div className="text-center">
-                        <button 
-                            className="btn btn-primary btn-xl text-uppercase"
-                            id="submitButton" 
-                            type="submit"
-                            onClick={e => this.submitForm(e)}
-                        >
-                            Send Message
-                        </button>
-                    </div>
-                </form>
-
-                </div>
-              </div>
 
                 
+      <form onSubmit={handleSubmit}>
+        <div className="row align-items-stretch mb-5">
+             <div className="form-group"> 
+                  <label htmlFor="name">
+                      Full Name
+                 </label>
+                 <input 
+                 className="form-control" 
+                 id="name"
+                 type="name" 
+                 name="name"
+                 placeholder="Full Name"
+                  />
+                 <ValidationError 
+                 prefix="name" 
+                 field="name"
+                 errors={state.errors}
+                 />
+
+                   <label htmlFor="email">
+                        Email Address
+                   </label>
+                  <input 
+                   className="form-control" 
+                   id="email"
+                   type="email" 
+                   name="email"
+                   placeholder="peterpan@xyz.com"
+                    />
+                   <ValidationError 
+                    prefix="Email" 
+                    field="email"
+                    errors={state.errors}
+                    />
+
+          <div className="form-group form-group-textarea mb-md-0"> 
+                    <label>
+                    Message
+                    </label>
+                    <textarea 
+                        className="form-control" 
+                        id="message"
+                        name="message"
+                        placeholder="Type your message"
+                        data-sb-validations="required"
+                    />
+                    <ValidationError 
+                        prefix="Message" 
+                        field="message"
+                        errors={state.errors}
+                    />
+                        <div className="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                        </div>                        
+
             </div>
+      
+</div>
 
-            
-            
-        </section>
-
-
-       
-        )
-    }
-}
-
-export default withFormik({
-    mapPropsToValues: () => ({
-        name:'',
-        email:'',
-        phone:'',
-        message:'',
-    }),
-
-    validationSchema: Yup.object().shape({
-        name: Yup.string()
-        .min(2, 'Please input firstname and lastname')
-        .required('You must give us your name!'),
-        email: Yup.string()
-        .email('You need to give us a valid email')
-        .required('We need your email!'),
-        phone: Yup.string()
-        .min(11, 'Please provide your correct phone number with your country code!' )
-        .max(15, 'Your phone number is too long!')
-        .required('Please provide your phone number!'),
-        message: Yup.string()
-        .min(20, 'You need to provide a more detailed information!')
-        .required('Message is required!')
-    }),
+                <div className="text-center">
+                    <button 
+                        className="btn btn-primary btn-xl text-uppercase text-centre"
+                        id="submitButton" 
+                        type="submit"
+                        disabled={state.submitting}
+                    >
+                            Send Message
+                    </button>
+                </div>
+    </form> 
     
-    handleSubmit: (values, {setSubmitting}) => {
-        console.log('VALUES', values)
-        alert("You've submitted the form", JSON.stringify(values));
-    }
-})(Contact);
+    </div>
+</section>
+  );
+}
+function Contact() {
+  return (
+    <ContactForm />
+  );
+}
+export default Contact;
