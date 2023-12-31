@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import SingleService from './SingleService';
 
 const services = [
+    
+    {title: 'Visa Consultation', description:'UK Visa, U.S.A Visa, Canada Visa, UAE Visa, Schengen Visa', icon:'fa-plane'},
     {title: 'Events Management', description:'Party, Brunch, Picnic, Weddings', icon:'fa fa-heart'},
     {title: 'Catering', description:'Cake, Food, Pasteries', icon:'fa-cake'},
     {title: 'Agriculture', description:'Livestock, Yam, Maize', icon:'fa-tree'}
