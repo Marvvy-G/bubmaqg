@@ -3943,7 +3943,7 @@ textarea.form-control-lg {
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
-  color: #ffc800;
+  color:  #78e5c7;
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
@@ -11339,9 +11339,9 @@ p {
 }
 
 #mainNav {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  background-color: #212529;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: #78e5c7;
 }
 #mainNav .navbar-toggler {
   padding: 0.75rem;
@@ -11387,9 +11387,9 @@ p {
     transition: height 0.3s ease-in-out;
   }
   #mainNav.navbar-shrink {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    background-color: #212529;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: #78e5c7;
   }
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.25em;

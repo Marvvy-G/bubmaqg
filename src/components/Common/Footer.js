@@ -13,12 +13,13 @@ class Footer extends Component {
                
                 <h4> <Link className="nav-link" to="/services">Services</Link> </h4>
                 <div style={{listStyle:'none'}} className="large text-muted">
-                <li>General Contractor</li>
+                <li>Visa Consultation</li>
+                <li>Admission Processing</li>
                 <li>Events Management</li>
                 <li>Catering and Food Delivery</li>
                 <li>Water Production</li>
                 <li>Farming</li>
-                <li>Livestock Delivery</li> 
+                
                 </div>
                 </div>
                 

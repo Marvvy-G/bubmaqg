@@ -11,7 +11,6 @@ import img6 from '../assets/img/portfolio/events-mmgt.jpg';
 
 const newservices = [
     {title:'Bubmaq-G Consult', subtitle:'Visa Processing, Admission Processing for Certificate Courses, Diploma, Bachelors Degree, Masters and PHD. Vacation and Tour Processing, Relocation to Canada, Software Application Development,Final Year Computer Science and Engineering Project Building Assistance', img:img3},
-    {title:'Consultation', subtitle:'Foreign Admission Processing, Visas Processing, Travel, and Tours processing', img:imgX},
     {title:'Catering', subtitle:'Pasteries, healthy Food, beverages', img:img1},
     {title:'Water Production', subtitle:' Clean and healthy water in our community ', img:img2},
     {title:'General Contractor', subtitle:'Trading, supply of goods and services, real-estate rental services', img:img3},

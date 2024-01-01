@@ -36,7 +36,7 @@ class About extends Component
                                     <div className="timeline-heading">
                                         <h4>Visa Processing</h4>
                                     </div>
-                                    <div className="timeline-body"><p className="text-muted">In 2017 our Water production sector was developed. Our community now has access to clean water thanks to the development of our water production sector.</p></div>
+                                    <div className="timeline-body"><p className="text-muted">We offer a specialized service on Visa consultation, processing and application. We will be with you at every step of the way. We specialize in Canadian Visa, USA Visa, UK Visa, Shengen Visa and UAE Visa. We also help in securing admission for Diploma, Bachelors, Masters and PHD degree in the above countries.</p></div>
                                 </div>
                             </li>
                            
@@ -46,7 +46,7 @@ class About extends Component
                                     <div className="timeline-heading">
                                         <h4>General Contracting</h4>
                                     </div>
-                                    <div className="timeline-body"><p className="text-muted">Our catering industry is intended to be flavorful and inventive. African specialties are produced as part of our catering services. We make an effort to maintain taste quality.</p></div>
+                                    <div className="timeline-body"><p className="text-muted">We offer plethora of services including trading, supply of goods and services and real-estate rental services.</p></div>
                                 </div>
                             </li>
                             <li className="timeline-inverted">

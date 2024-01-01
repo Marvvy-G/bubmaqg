@@ -7,7 +7,7 @@ class PageWrapper extends Component {
     render(){
         return (
             <div>
-                <nav className="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+                <nav className="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
                     <div className="container">
                         <Link className="navbar-brand" to="/"><img style={{height:"6.5rem"}} src="assets/img/default.png" alt="bubmaq-g" /></Link>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
