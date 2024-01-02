@@ -12,13 +12,14 @@ class Footer extends Component {
                 <div className="col-lg-4">
                
                 <h4> <Link className="nav-link" to="/services">Services</Link> </h4>
-                <div style={{listStyle:'none'}} className="large text-muted">
+                <div  className="large text-muted">
+           <ul style={{listStyle:'none', margin:'0', padding:'0'}}>   
                 <li>Visa Consultation</li>
                 <li>Admission Processing</li>
                 <li>Events Management</li>
                 <li>Catering and Food Delivery</li>
                 <li>Water Production</li>
-                <li>Farming</li>
+                <li>Farming</li></ul>
                 
                 </div>
                 </div>

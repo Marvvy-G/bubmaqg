@@ -11,15 +11,65 @@ class About extends Component
             <section className="page-section" id="about">
             <div className="container">
                         <div className="text-center">
-                            <h2 className="section-heading text-uppercase">Our Journey</h2>
+                            <h2 className="section-heading text-uppercase large text-muted">Our Journey</h2>
                             <h3 className="section-subheading text-muted">
                                     A family-run company called Bubmaq-G was founded in northern Nigeria. 
                                     It was created in order to meet the community members' growing demands. 
-                                    One of the main goals Bubmaq-G has to this day is to provide healthy food and clean water to the residents of the middle belt. 
+                                    One of the main goals Bubmaq-G to this day has, is to <strong>provide healthy food and clean water </strong> to the residents of the middle belt. 
                                     In addition to real estate, catering, event management, general contracting, commercial transportation, and training programs focused on empowering individuals and families,
                                     we have now expanded our services beyond agricultural and water production.
                                     <br/><strong>To us its all about giving to our community!</strong></h3>
                         </div>
+                        <div className="">
+                            
+                                <div  className="large text-muted " >
+                                    <h4 className="section-heading text-uppercase text-center">Our Strategy</h4>
+                                    <div style={{margin:'0px 50px 0px 70px',  padding:'0px 50px 0px 70px', justifyContent:'center'}}>
+                                    <p><strong>Purpose:</strong> To be a leader in the real estate industry by providing enhanced services, relationship and profitability.
+                                    </p>
+                                    <p><strong>Mission Statement:</strong> To build long term relationships with our customers and clients and provide exceptional customer services by pursuing business through innovation and advanced technology.
+                                    </p>
+                                    <p><strong>Vision:</strong> To provide quality services that exceeds the expectations of our esteemed customers.
+                                    </p>
+                                </div>
+                                
+
+                                <h4 className="section-subheading text-uppercase text-center">Core Values</h4>
+                                <ul style={{listStyle:'none', margin:'0px 50px 0px 70px',  padding:'0px 50px 0px 70px'}}className="large text-muted" >
+                                    <li>
+                                    We believe in treating our customers with respect and faith.
+                                    </li>
+                                    <li>
+                                    We grow through creativity, invention and innovation.
+                                    </li>
+                                    <li>
+                                    We integrate honesty, integrity and business ethics into all aspects of our business functioning.
+                                    </li> 
+                                </ul>
+
+                            <br></br>
+                               
+                                    <h4 className="section-subheading text-uppercase text-center"> Goals</h4>
+                                    <ul style={{listStyle:'none', margin:'0px 50px 0px 70px',  padding:'0px 50px 0px 70px'}}className="large text-muted" >
+                                        <li>
+                                        Regional expansion in the field of property management and develop a strong base of key customers.
+                                        </li>
+                                        <li>
+                                        Increase the assets and investments of the company to support the development of services.
+                                        </li>
+                                        <li>
+                                        To build good reputation in the field of real estate and property management and become a key player in the industry.
+                                        </li> 
+                                    </ul>
+                                                   
+                            </div>
+                            
+                            <br></br>
+                        </div>
+                        <h4 className="section-subheading text-uppercase text-center"> Scope of Work </h4>
+                        <p className="text-center text-muted">
+                            Bubmaq-G Investment Limited Conducts businesses in various sectors such;
+                        </p>
                         <ul className="timeline">
                         <li className="timeline-inverted">
                                 <div className="timeline-image"><img className="rounded-circle img-fluid" src="assets/img/about/11.jpg" alt="..." /></div>
