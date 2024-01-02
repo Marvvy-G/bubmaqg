@@ -75,7 +75,7 @@ class About extends Component
                                 <div className="timeline-image"><img className="rounded-circle img-fluid" src="assets/img/about/11.jpg" alt="..." /></div>
                                 <div className="timeline-panel">
                                     <div className="timeline-heading">
-                                        <h4>Educational Study and Development Consult</h4>
+                                        <h4>Educational Development Consultation</h4>
                                     </div>
                                     <div className="timeline-body"><p className="text-muted">We help institutions develop their curriculums and workplace organizational flow.</p></div>
                                 </div>
