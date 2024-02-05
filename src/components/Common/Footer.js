@@ -26,7 +26,7 @@ class Footer extends Component {
                 
                     <div className="col-lg-4">       
                     <h4> <Link className="nav-link" to="/contact">Contact Us</Link> </h4>
-                        <p className="large text-muted"><strong>Our Office:</strong> Shop 1, Porsche Terraces Estate, Phase 1, New Karmo, Abuja.</p>
+                        <p className="large text-muted"><strong>Our Office:</strong> Porsche Terraces Estate, Phase 4, Abuja, Nigeria.</p>
                         <p className="large text-muted"> <strong>Send an Email:</strong> contact@bubmaqg.com</p>
                         <p className="large text-muted"><strong>Telephone:</strong> +234-816-972-1908 </p>
                     </div>
