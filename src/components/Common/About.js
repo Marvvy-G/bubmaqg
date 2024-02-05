@@ -24,18 +24,18 @@ class About extends Component
                             
                                 <div  className="large text-muted " >
                                     <h4 className="section-heading text-uppercase text-center">Our Strategy</h4>
-                                    <div className='section '>
-                                    <p><strong>Purpose:</strong> To be a leader in the real estate industry by providing enhanced services, relationship and profitability.
-                                    </p>
-                                    <p><strong>Mission Statement:</strong> To build long term relationships with our customers and clients and provide exceptional customer services by pursuing business through innovation and advanced technology.
-                                    </p>
-                                    <p><strong>Vision:</strong> To provide quality services that exceeds the expectations of our esteemed customers.
-                                    </p>
-                                </div>
+                                    <ul style={{listStyle:'none', display: 'block', marginLleft: 'auto', marginRright: 'auto', width: '100%'}}className="text-muted rounded p-[30px] bg-[#E8D5C4]" >
+                                    <li><strong>Purpose:</strong> To be a leader in the real estate industry by providing enhanced services, relationship and profitability.
+                                    </li>
+                                    <li><strong>Mission Statement:</strong> To build long term relationships with our customers and clients and provide exceptional customer services by pursuing business through innovation and advanced technology.
+                                    </li>
+                                    <li><strong>Vision:</strong> To provide quality services that exceeds the expectations of our esteemed customers.
+                                    </li>
+                                </ul>
                                 
 
                                 <h4 className="section-subheading text-uppercase text-center">Core Values</h4>
-                                <ul style={{listStyle:'none', margin:'0px 30px 0px 30px',  padding:'0px 30px 0px 30px'}}className="large text-muted" >
+                                <ul style={{listStyle:'none', display: 'block', marginLleft: 'auto', marginRright: 'auto', width: '100%'}}className="text-muted rounded p-[30px] bg-[#E8D5C4]" >
                                     <li>
                                     We believe in treating our customers with respect and faith.
                                     </li>
@@ -50,7 +50,7 @@ class About extends Component
                             <br></br>
                                
                                     <h4 className="section-subheading text-uppercase text-center"> Goals</h4>
-                                    <ul style={{listStyle:'none', margin:'0px 50px 0px 70px',  padding:'0px 50px 0px 70px'}}className="large text-muted" >
+                                    <ul style={{listStyle:'none', display: 'block', marginLleft: 'auto', marginRright: 'auto', width: '100%'}}className="text-muted rounded p-[30px] bg-[#E8D5C4]" >
                                         <li>
                                         Regional expansion in the field of property management and develop a strong base of key customers.
                                         </li>
