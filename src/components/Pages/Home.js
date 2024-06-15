@@ -7,7 +7,8 @@ import Header from '../Common/Header';
 import Services from '../Common/Services';
 import Portfolio from '../Common/Portfolio';
 import About from '../Common/About';
-import Footer from '../Common/Footer';
+import Footer from '../Common/Footer'; 
+import SoftwareServices from '../Common/softwareservices'
 
 class Home extends Component {
     render(){
@@ -21,6 +22,7 @@ class Home extends Component {
                     showButton={true}
                     img= "https://images.pexels.com/photos/17276688/pexels-photo-17276688/free-photo-of-a-skyscraper-in-a-city.jpeg?auto=compress&cs=tinysrgb&w=600"
                 /> 
+                <SoftwareServices/>
                 <Services />
                 <Portfolio />
                 <About />
